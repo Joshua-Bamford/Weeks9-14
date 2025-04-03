@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Knight : MonoBehaviour
     Animator animator;
     public float speed = 2;
     public bool canRun = true;
+    public CinemachineImpulseSource impulseSource;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +36,10 @@ public class Knight : MonoBehaviour
         if(canRun == true)
         {
         transform.position += transform.right * direction * speed * Time.deltaTime;
+          
         }
-        
+
+       
     }
 
     public void AttackHasFinished()
@@ -43,4 +47,11 @@ public class Knight : MonoBehaviour
         Debug.Log("The attack has finished");
         canRun = true;
     }
+
+    public void stomp()
+    {
+        impulseSource.GenerateImpulse();
+
+    }
+
 }
