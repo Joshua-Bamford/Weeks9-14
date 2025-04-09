@@ -472,7 +472,6 @@ GameObject:
   - component: {fileID: 416915838}
   - component: {fileID: 416915837}
   - component: {fileID: 416915836}
-  - component: {fileID: 416915839}
   m_Layer: 0
   m_Name: Button C
   m_TagString: Untagged
@@ -492,7 +491,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c094f9e662230e47b2f11e87c358059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonImage: {fileID: 416915837}
+  inputSequence: 
+  HoveringOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416915836}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: HighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HoveringOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416915836}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DeHighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ButtonClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416915836}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: AddInputSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  valueOfButtonPressed: 3
 --- !u!212 &416915837
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -560,51 +605,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &416915839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416915835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 416915836}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseHoveringOverButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 416915836}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseLeavingButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &524071842
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +616,6 @@ GameObject:
   - component: {fileID: 524071846}
   - component: {fileID: 524071845}
   - component: {fileID: 524071844}
-  - component: {fileID: 524071843}
   m_Layer: 0
   m_Name: Button B
   m_TagString: Untagged
@@ -624,51 +623,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &524071843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524071842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 524071844}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseHoveringOverButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 524071844}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseLeavingButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &524071844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,7 +635,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c094f9e662230e47b2f11e87c358059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonImage: {fileID: 524071845}
+  inputSequence: 
+  HoveringOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 524071844}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: HighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HoveringOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 524071844}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DeHighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ButtonClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 524071844}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: AddInputSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  valueOfButtonPressed: 2
 --- !u!212 &524071845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -759,7 +759,6 @@ GameObject:
   m_Component:
   - component: {fileID: 569236533}
   - component: {fileID: 569236532}
-  - component: {fileID: 569236531}
   - component: {fileID: 569236530}
   m_Layer: 0
   m_Name: Button A
@@ -780,52 +779,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c094f9e662230e47b2f11e87c358059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonImage: {fileID: 569236532}
---- !u!114 &569236531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569236529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 569236530}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseHoveringOverButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 569236530}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseLeavingButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  inputSequence: 
+  HoveringOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 569236530}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: HighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HoveringOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 569236530}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DeHighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ButtonClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 569236530}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: AddInputSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  valueOfButtonPressed: 1
 --- !u!212 &569236532
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1506,7 +1506,6 @@ GameObject:
   - component: {fileID: 1452257206}
   - component: {fileID: 1452257205}
   - component: {fileID: 1452257204}
-  - component: {fileID: 1452257207}
   m_Layer: 0
   m_Name: Button D
   m_TagString: Untagged
@@ -1526,7 +1525,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c094f9e662230e47b2f11e87c358059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonImage: {fileID: 1452257205}
+  inputSequence: 
+  HoveringOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1452257204}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: HighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HoveringOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1452257204}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DeHighlightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ButtonClicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1452257204}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: AddInputSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  valueOfButtonPressed: 4
 --- !u!212 &1452257205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1594,51 +1639,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1452257207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1452257203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1452257204}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseHoveringOverButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1452257204}
-          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-          m_MethodName: MouseLeavingButton
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1889629248
 GameObject:
   m_ObjectHideFlags: 0
