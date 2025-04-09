@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    public Image buttonImage;
+    public SpriteRenderer buttonImage;
     Color highlightColor = new Color(255f, 218f, 69f);
     Color regularColor = new Color(185f, 185f, 185f);
 

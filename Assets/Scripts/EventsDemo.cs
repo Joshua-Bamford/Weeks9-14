@@ -33,5 +33,9 @@ public class EventsDemo : MonoBehaviour
         banana.localScale = Vector3.one;
     }
 
-    
+    public void ClickedButton()
+    {
+
+    }
+
 }
