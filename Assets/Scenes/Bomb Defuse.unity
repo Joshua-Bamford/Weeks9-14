@@ -1012,7 +1012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191.4, y: -199.46}
+  m_AnchoredPosition: {x: -186.24, y: -199.46}
   m_SizeDelta: {x: 108.0394, y: 2.558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1155498930
@@ -1062,14 +1062,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1128,6 +1128,9 @@ MonoBehaviour:
   minutes: 0
   currentStage: 1
   timeLimit: 100
+  timerText: {fileID: 1155498930}
+  panel_1: {fileID: 9033241119559717604}
+  panel_2: {fileID: 1429307267}
 --- !u!1 &1260796617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191.4, y: -199.46}
-  m_SizeDelta: {x: 108.0394, y: 2.558}
+  m_AnchoredPosition: {x: -189.36, y: -199.46}
+  m_SizeDelta: {x: 105.5509, y: 0.8644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1260796619
 MonoBehaviour:
@@ -1185,7 +1188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00:00
+  m_text: 00.000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 39b56a3dae047c041ab52138054129bb, type: 2}
   m_sharedMaterial: {fileID: -1051491757633633818, guid: 39b56a3dae047c041ab52138054129bb, type: 2}
@@ -1212,14 +1215,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.4
+  m_fontSizeBase: 0.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1495,6 +1498,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eb6ebb80e610c49b5eef0e8203c350, type: 3}
+--- !u!1 &1429307267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5648691445618480022, guid: 99eb6ebb80e610c49b5eef0e8203c350, type: 3}
+  m_PrefabInstance: {fileID: 1429307266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1452257203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1960,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99eb6ebb80e610c49b5eef0e8203c350, type: 3}
+--- !u!1 &9033241119559717604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5648691445618480022, guid: 99eb6ebb80e610c49b5eef0e8203c350, type: 3}
+  m_PrefabInstance: {fileID: 9033241119559717603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

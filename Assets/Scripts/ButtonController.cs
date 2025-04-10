@@ -28,7 +28,7 @@ public class ButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current Answer" + inputSequence[0] + inputSequence[1] + inputSequence[2] + inputSequence[3]);
+       Debug.Log("Current Answer" + inputSequence[0] + inputSequence[1] + inputSequence[2] + inputSequence[3]);
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (buttonSprite.bounds.Contains(mousePosition))
         {
