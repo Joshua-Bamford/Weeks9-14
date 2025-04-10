@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Timer : MonoBehaviour
     public TMP_Text timerText;
     public GameObject panel_1;
     public GameObject panel_2;
+    public UnityEvent timerDone;
 
     const int correctValue = 15; // Correct value to compare against in stage 1. ADBBCC A=1 B=2 C=3 D=4
     // Start is called before the first frame update
@@ -25,7 +27,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(timeLimit <= 0)
+        {
+            timerDone.Invoke();
+        }
+
     }
 
    private IEnumerator Timekeeping()

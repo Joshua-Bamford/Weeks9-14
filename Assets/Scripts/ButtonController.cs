@@ -8,6 +8,7 @@ public class ButtonController : MonoBehaviour
  
     public int[] inputSequence = {0, 0, 0, 0};
     public UnityEvent ButtonClicked;
+   
     public int valueOfButtonPressed;
     //public GameObject buttonA;
    // public GameObject buttonB;
