@@ -7,13 +7,9 @@ public class ButtonController : MonoBehaviour
 {
  
     public int[] inputSequence = {0, 0, 0, 0};
-    public UnityEvent ButtonClicked;
-   
+    public UnityEvent answerCorrect;
+    const int correctValue = 10; // Correct value to compare against in stage 1. ADCB A=1 B=2 C=3 D=4
     public int valueOfButtonPressed;
-    //public GameObject buttonA;
-   // public GameObject buttonB;
-   // public GameObject buttonC;
-   // public GameObject buttonD;
     public SpriteRenderer buttonASprite;
     public SpriteRenderer buttonBSprite;
     public SpriteRenderer buttonCSprite;
@@ -21,10 +17,6 @@ public class ButtonController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // buttonASprite = GetComponent<SpriteRenderer>();
-       // buttonBSprite = GetComponent<SpriteRenderer>();
-       // buttonCSprite = GetComponent<SpriteRenderer>();
-       // buttonDSprite = GetComponent<SpriteRenderer>();
         inputSequence = new int[4];
     }
 
@@ -38,25 +30,20 @@ public class ButtonController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0)) {
                 AddInputSequence(1);
-               // ButtonClicked.Invoke();
             }
         }
-
         if(buttonBSprite.bounds.Contains(mousePosition))
         {
             if (Input.GetMouseButtonDown(0))
             {
                 AddInputSequence(2);
-              //  ButtonClicked.Invoke();
             }
         }
-
         if (buttonCSprite.bounds.Contains(mousePosition))
         {
             if (Input.GetMouseButtonDown(0))
             {
                 AddInputSequence(3);
-               // ButtonClicked.Invoke();
             }
         }
 
@@ -65,9 +52,18 @@ public class ButtonController : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 AddInputSequence(4);
-               // ButtonClicked.Invoke();
             }
         }
+
+        if (inputSequence[3] != 0)
+        {
+            if ((inputSequence[0] + inputSequence[1] + inputSequence[2] + inputSequence[3]) == correctValue)    //if the sum value of all button inputs equals the correct amount for the sequence
+            {
+                answerCorrect.Invoke();
+            }
+        }
+
+
     }
 
     public void AddInputSequence(int valueOfButtonPressed)
@@ -90,6 +86,7 @@ public class ButtonController : MonoBehaviour
         }
         else
         {
+
             inputSequence[0] = 0;
             inputSequence[1] = 0;
             inputSequence[2] = 0;

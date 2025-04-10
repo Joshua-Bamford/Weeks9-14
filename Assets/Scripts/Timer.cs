@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     public GameObject panel_2;
     public UnityEvent timerDone;
 
+    
     const int correctValue = 15; // Correct value to compare against in stage 1. ADBBCC A=1 B=2 C=3 D=4
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,10 @@ public class Timer : MonoBehaviour
             timerDone.Invoke();
         }
 
+    }
+    public void ChangeStage()
+    {
+        currentStage = 2;
     }
 
    private IEnumerator Timekeeping()
